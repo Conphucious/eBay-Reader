@@ -8,6 +8,7 @@ public class Item {
 	private Date dateEnd;
 	private String price;
 	private String link;
+	private ItemType type;
 	
 	public Item(String link) {
 		this.link = link;

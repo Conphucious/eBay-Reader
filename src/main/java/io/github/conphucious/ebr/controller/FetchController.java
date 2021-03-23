@@ -7,6 +7,7 @@ import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import io.github.conphucious.ebr.model.ItemType;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
@@ -31,31 +32,39 @@ public class FetchController {
 	public Item fetchInfo(String url) {
 		Item item = new Item(url);
 		try {
-//			Document document = Jsoup.connect("https://www.ebay.com/itm/373502015055?ViewItem=&vxp=mtr&item=373502015055").get();
+			Document document = Jsoup.connect(item.getLink()).get();
+			Elements titleElement = document.select("span[id=\"vi-lkhdr-itmTitl\"]");
+			Elements timeLeftElement = document.select("span[id=\"vi-cdown_timeLeft\"]");
+			Elements dateEndElement = document.select("span[class=\"vi-tm-left\"]");
+			Element priceElement = document.getElementById("prcIsum_bidPrice");
 
+			// Set ItemType based on if other selectors exist
+			ItemType type = null;
+			if (priceElement == null) {
+				priceElement = document.getElementById("prcIsum");
+				Elements bestOfferElement = document.select("div[class=\"lbl\"]");
+				type = bestOfferElement.text().isEmpty() ? ItemType.BUY : ItemType.BEST_OFFER;
+			} else {
+				type = ItemType.BID;
+			}
 
-			Document document = Jsoup.connect("https://www.ebay.com/itm/Latest-Model-MacBook-Pro-13-M1-8-Core-CPU-8GB-RAM-256GB-SSD-Touch-Bar/164773795191?hash=item265d489577:g:Y2kAAOSwGe9gV-Ru").get();
-			Element price = document.getElementById("prcIsum_bidPrice");
-			Elements tl = document.select("span[id=\"vi-cdown_timeLeft\"]");
-			Elements dl = document.select("span[class=\"vi-tm-left\"]");
-			Elements title = document.select("span[id=\"vi-lkhdr-itmTitl\"]");
-			
+			// Set price element based on bid/buy
+			priceElement = priceElement == null ? document.getElementById("prcIsum") :  priceElement;
+
 			// Get end date + time and convert from long to date
 			Pattern pattern = Pattern.compile("(?<=timems=\")(.*)(?=\")");
-	        Matcher matcher = pattern.matcher(dl.html());
+	        Matcher matcher = pattern.matcher(dateEndElement.html());
 	        Date dateEnd = null;
 	        while(matcher.find()) {
-	        	System.out.println(matcher.start() + "_" + matcher.end() + "> " + matcher.group());
 	        	long timeMs = Long.parseLong(matcher.group());
 	        	dateEnd = new Date(timeMs);
 	        }
-	        
-	        // need to account for if it's: BID, BUY WITH OFFER, BUY
-	        
-	        item.setTitle(title.text());
-	        item.setTimeLeft(tl.text());
+
+
+	        item.setTitle(titleElement.text());
+	        item.setTimeLeft(timeLeftElement.text());
 	        item.setDateEnd(dateEnd);
-	        item.setPrice(price.text());
+	        item.setPrice(priceElement.text());
 			
 	        System.out.println(item);
 		} catch (IOException e) {
