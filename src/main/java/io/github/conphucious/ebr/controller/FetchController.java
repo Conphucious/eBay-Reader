@@ -23,6 +23,7 @@ public class FetchController {
 	}
 	
 	public void addItem(String url) {
+		// add after each?
 		Item item = fetchInfo(url);
 		itemList.add(item);
 	}
@@ -30,21 +31,33 @@ public class FetchController {
 	public Item fetchInfo(String url) {
 		Item item = new Item(url);
 		try {
-			Document document = Jsoup.connect("https://www.ebay.com/itm/373502015055?ViewItem=&vxp=mtr&item=373502015055").get();
-			
+//			Document document = Jsoup.connect("https://www.ebay.com/itm/373502015055?ViewItem=&vxp=mtr&item=373502015055").get();
+
+
+			Document document = Jsoup.connect("https://www.ebay.com/itm/Latest-Model-MacBook-Pro-13-M1-8-Core-CPU-8GB-RAM-256GB-SSD-Touch-Bar/164773795191?hash=item265d489577:g:Y2kAAOSwGe9gV-Ru").get();
 			Element price = document.getElementById("prcIsum_bidPrice");
-			Element timeLeft = document.getElementById("vi-cdown_timeLeft");
-			Elements timeMs = document.getElementsByClass("timeMs");
+			Elements tl = document.select("span[id=\"vi-cdown_timeLeft\"]");
+			Elements dl = document.select("span[class=\"vi-tm-left\"]");
+			Elements title = document.select("span[id=\"vi-lkhdr-itmTitl\"]");
 			
-			System.out.println(price.wholeText() + "_" + timeLeft.wholeText() + "_" + timeLeft.text());
+			// Get end date + time and convert from long to date
+			Pattern pattern = Pattern.compile("(?<=timems=\")(.*)(?=\")");
+	        Matcher matcher = pattern.matcher(dl.html());
+	        Date dateEnd = null;
+	        while(matcher.find()) {
+	        	System.out.println(matcher.start() + "_" + matcher.end() + "> " + matcher.group());
+	        	long timeMs = Long.parseLong(matcher.group());
+	        	dateEnd = new Date(timeMs);
+	        }
+	        
+	        // need to account for if it's: BID, BUY WITH OFFER, BUY
+	        
+	        item.setTitle(title.text());
+	        item.setTimeLeft(tl.text());
+	        item.setDateEnd(dateEnd);
+	        item.setPrice(price.text());
 			
-			for (Element e : timeMs) {
-				System.out.println(e.wholeText());
-			}
-			
-			item.setTitle(document.title());
-//			item.setPrice(price);
-			
+	        System.out.println(item);
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
@@ -53,29 +66,7 @@ public class FetchController {
 	}
 	
 	public void fetchInfo() {
-		try {
-			Document document = Jsoup.connect("https://www.ebay.com/itm/373502015055?ViewItem=&vxp=mtr&item=373502015055").get();
-			Element price = document.getElementById("prcIsum_bidPrice");
-			Elements tl = document.select("span[id=\"vi-cdown_timeLeft\"]");
-			Elements dl = document.select("span[class=\"vi-tm-left\"]");
-			Elements title = document.select("span[id=\"vi-lkhdr-itmTitl\"]");
-			Element desc = document.getElementById("motorSellerProvidedTitle");
-			
-			Pattern pattern = Pattern.compile("(?<=timems=\")(.*)(?=\")");
-
-	        Matcher matcher = pattern.matcher(dl.html());
-	        while(matcher.find()) {
-	        	System.out.println(matcher.start() + "_" + matcher.end() + "> " + matcher.group());
-	        	long timeMs = Long.parseLong(matcher.group());
-	        	Date d = new Date(timeMs);
-	        	System.out.println(d);
-	        }
-			
-			
-			System.out.println(title.text() + "_" + desc.text() + "_" + price.wholeText() + "_" + tl.text() + "_" + dl.text());
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
+		
 	}
 	
 }

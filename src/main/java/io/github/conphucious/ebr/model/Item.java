@@ -1,10 +1,12 @@
 package io.github.conphucious.ebr.model;
 
+import java.util.Date;
+
 public class Item {
 	private String title;
 	private String timeLeft;
-	private String timeEnd;
-	private double price; 
+	private Date dateEnd;
+	private String price;
 	private String link;
 	
 	public Item(String link) {
@@ -18,7 +20,7 @@ public class Item {
 	public void setTitle(String title) {
 		this.title = title;
 	}
-
+	
 	public String getTimeLeft() {
 		return timeLeft;
 	}
@@ -27,19 +29,19 @@ public class Item {
 		this.timeLeft = timeLeft;
 	}
 
-	public String getTimeEnd() {
-		return timeEnd;
+	public Date getDateEnd() {
+		return dateEnd;
 	}
 
-	public void setTimeEnd(String timeEnd) {
-		this.timeEnd = timeEnd;
+	public void setDateEnd(Date dateEnd) {
+		this.dateEnd = dateEnd;
 	}
 
-	public double getPrice() {
+	public String getPrice() {
 		return price;
 	}
 
-	public void setPrice(double price) {
+	public void setPrice(String price) {
 		this.price = price;
 	}
 
@@ -49,5 +51,11 @@ public class Item {
 
 	public void setLink(String link) {
 		this.link = link;
+	}
+
+	@Override
+	public String toString() {
+		return "Item [title=" + title + ", timeLeft=" + timeLeft + ", dateEnd=" + dateEnd
+				+ ", price=" + price + ", link=" + link + "]";
 	}
 }
