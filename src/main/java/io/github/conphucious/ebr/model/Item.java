@@ -3,60 +3,68 @@ package io.github.conphucious.ebr.model;
 import java.util.Date;
 
 public class Item {
-	private String title;
-	private String timeLeft;
-	private Date dateEnd;
-	private String price;
-	private String link;
-	private ItemType type;
-	
-	public Item(String link) {
-		this.link = link;
-	}
+    private String title;
+    private String timeLeft;
+    private Date dateEnd;
+    private String price;
+    private String link;
+    private ItemType type;
 
-	public String getTitle() {
-		return title;
-	}
+    public Item(String link) {
+        this.link = link;
+    }
 
-	public void setTitle(String title) {
-		this.title = title;
-	}
-	
-	public String getTimeLeft() {
-		return timeLeft;
-	}
+    public String getTitle() {
+        return title;
+    }
 
-	public void setTimeLeft(String timeLeft) {
-		this.timeLeft = timeLeft;
-	}
+    public void setTitle(String title) {
+        this.title = title;
+    }
 
-	public Date getDateEnd() {
-		return dateEnd;
-	}
+    public String getTimeLeft() {
+        return timeLeft;
+    }
 
-	public void setDateEnd(Date dateEnd) {
-		this.dateEnd = dateEnd;
-	}
+    public void setTimeLeft(String timeLeft) {
+        this.timeLeft = timeLeft;
+    }
 
-	public String getPrice() {
-		return price;
-	}
+    public Date getDateEnd() {
+        return dateEnd;
+    }
 
-	public void setPrice(String price) {
-		this.price = price;
-	}
+    public void setDateEnd(Date dateEnd) {
+        this.dateEnd = dateEnd;
+    }
 
-	public String getLink() {
-		return link;
-	}
+    public String getPrice() {
+        return price;
+    }
 
-	public void setLink(String link) {
-		this.link = link;
-	}
+    public void setPrice(String price) {
+        this.price = price;
+    }
 
-	@Override
-	public String toString() {
-		return "Item [title=" + title + ", timeLeft=" + timeLeft + ", dateEnd=" + dateEnd
-				+ ", price=" + price + ", link=" + link + "]";
-	}
+    public String getLink() {
+        return link;
+    }
+
+    public void setLink(String link) {
+        this.link = link;
+    }
+
+    public ItemType getType() {
+        return type;
+    }
+
+    public void setType(ItemType type) {
+        this.type = type;
+    }
+
+    @Override
+    public String toString() {
+        return "Item [title=" + title + ", timeLeft=" + timeLeft + ", dateEnd=" + dateEnd
+                + ", price=" + price + ", link=" + link + "]";
+    }
 }

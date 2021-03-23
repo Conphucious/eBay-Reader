@@ -68,6 +68,7 @@ public class FetchController {
 			
 	        System.out.println(item);
 		} catch (IOException e) {
+			// handle no internet or other errors...
 			e.printStackTrace();
 		}
 		
@@ -75,7 +76,9 @@ public class FetchController {
 	}
 	
 	public void fetchInfo() {
-		
+		for (Item item : itemList) {
+			System.out.println(item);
+		}
 	}
 	
 }
