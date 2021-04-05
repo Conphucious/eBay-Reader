@@ -19,13 +19,23 @@
         <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
       </path>
     </expand>
-    <select />
+    <select>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:origin/master" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </select>
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ad086e1c-8bd3-4523-989e-9c6b09624023" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/conphucious/ebr/controller/ItemController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/conphucious/ebr/model/Identifiers.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/conphucious/ebr/model/ItemStatus.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/io/github/conphucious/ebr/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/conphucious/ebr/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/conphucious/ebr/controller/FetchController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/conphucious/ebr/controller/FetchController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/io/github/conphucious/ebr/model/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/conphucious/ebr/model/Item.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/io/github/conphucious/ebr/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/io/github/conphucious/ebr/App.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/io/github/conphucious/ebr/controller/FetchController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/io/github/conphucious/ebr/controller/FetchController.class" afterDir="false" />
@@ -40,6 +50,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Enum" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -61,9 +72,11 @@
   <component name="PropertiesComponent">
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -111,6 +124,8 @@
       <updated>1616468434161</updated>
       <workItem from="1616468434983" duration="196000" />
       <workItem from="1616468638947" duration="1148000" />
+      <workItem from="1616892101117" duration="292000" />
+      <workItem from="1617593144524" duration="1379000" />
     </task>
     <servers />
   </component>
@@ -122,7 +137,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="origin/master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
@@ -130,37 +157,53 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="1046" y="224" key="#com.intellij.ide.util.MemberChooser" timestamp="1616469691606">
+    <state x="1046" y="224" key="#com.intellij.ide.util.MemberChooser" timestamp="1616892350532">
       <screen x="0" y="0" width="2482" height="1080" />
     </state>
-    <state x="1046" y="224" key="#com.intellij.ide.util.MemberChooser/0.0.2482.1080@0.0.2482.1080" timestamp="1616469691606" />
+    <state x="1046" y="224" key="#com.intellij.ide.util.MemberChooser/0.0.2482.1080@0.0.2482.1080" timestamp="1616892350532" />
+    <state x="921" y="276" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1616892286195">
+      <screen x="0" y="0" width="2482" height="1080" />
+    </state>
+    <state x="921" y="276" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.2482.1080@0.0.2482.1080" timestamp="1616892286195" />
     <state x="1021" y="295" key="FileChooserDialogImpl" timestamp="1616468649634">
       <screen x="0" y="0" width="2482" height="1080" />
     </state>
     <state x="1021" y="295" key="FileChooserDialogImpl/0.0.2482.1080@0.0.2482.1080" timestamp="1616468649634" />
-    <state width="2439" height="170" key="GridCell.Tab.0.bottom" timestamp="1616469787303">
+    <state width="1195" height="169" key="GridCell.Tab.0.bottom" timestamp="1617594422392">
       <screen x="0" y="0" width="2482" height="1080" />
     </state>
-    <state width="2439" height="170" key="GridCell.Tab.0.bottom/0.0.2482.1080@0.0.2482.1080" timestamp="1616469787303" />
-    <state width="2439" height="170" key="GridCell.Tab.0.center" timestamp="1616469787303">
+    <state width="1195" height="169" key="GridCell.Tab.0.bottom/0.0.2482.1080@0.0.2482.1080" timestamp="1617594422392" />
+    <state width="1195" height="169" key="GridCell.Tab.0.center" timestamp="1617594422392">
       <screen x="0" y="0" width="2482" height="1080" />
     </state>
-    <state width="2439" height="170" key="GridCell.Tab.0.center/0.0.2482.1080@0.0.2482.1080" timestamp="1616469787303" />
-    <state width="2439" height="170" key="GridCell.Tab.0.left" timestamp="1616469787303">
+    <state width="1195" height="169" key="GridCell.Tab.0.center/0.0.2482.1080@0.0.2482.1080" timestamp="1617594422392" />
+    <state width="1195" height="169" key="GridCell.Tab.0.left" timestamp="1617594422392">
       <screen x="0" y="0" width="2482" height="1080" />
     </state>
-    <state width="2439" height="170" key="GridCell.Tab.0.left/0.0.2482.1080@0.0.2482.1080" timestamp="1616469787303" />
-    <state width="2439" height="170" key="GridCell.Tab.0.right" timestamp="1616469787303">
+    <state width="1195" height="169" key="GridCell.Tab.0.left/0.0.2482.1080@0.0.2482.1080" timestamp="1617594422392" />
+    <state width="1195" height="169" key="GridCell.Tab.0.right" timestamp="1617594422392">
       <screen x="0" y="0" width="2482" height="1080" />
     </state>
-    <state width="2439" height="170" key="GridCell.Tab.0.right/0.0.2482.1080@0.0.2482.1080" timestamp="1616469787303" />
+    <state width="1195" height="169" key="GridCell.Tab.0.right/0.0.2482.1080@0.0.2482.1080" timestamp="1617594422392" />
     <state x="721" y="114" key="SettingsEditor" timestamp="1616468694455">
       <screen x="0" y="0" width="2482" height="1080" />
     </state>
     <state x="721" y="114" key="SettingsEditor/0.0.2482.1080@0.0.2482.1080" timestamp="1616468694455" />
-    <state x="904" y="235" width="672" height="678" key="search.everywhere.popup" timestamp="1616469690173">
+    <state x="1672" y="229" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1616892321719">
       <screen x="0" y="0" width="2482" height="1080" />
     </state>
-    <state x="904" y="235" width="672" height="678" key="search.everywhere.popup/0.0.2482.1080@0.0.2482.1080" timestamp="1616469690173" />
+    <state x="1672" y="229" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.2482.1080@0.0.2482.1080" timestamp="1616892321719" />
+    <state x="-7" y="0" width="1255" height="1087" key="dock-window-1" timestamp="1617593235680">
+      <screen x="0" y="0" width="2482" height="1080" />
+    </state>
+    <state x="-7" y="0" width="1255" height="1087" key="dock-window-1/0.0.2482.1080@0.0.2482.1080" timestamp="1617593235680" />
+    <state x="-7" y="0" width="1255" height="1087" key="dock-window-2" timestamp="1617593901617">
+      <screen x="0" y="0" width="2482" height="1080" />
+    </state>
+    <state x="-7" y="0" width="1255" height="1087" key="dock-window-2/0.0.2482.1080@0.0.2482.1080" timestamp="1617593901617" />
+    <state x="904" y="235" width="672" height="678" key="search.everywhere.popup" timestamp="1616892349871">
+      <screen x="0" y="0" width="2482" height="1080" />
+    </state>
+    <state x="904" y="235" width="672" height="678" key="search.everywhere.popup/0.0.2482.1080@0.0.2482.1080" timestamp="1616892349871" />
   </component>
 </project>

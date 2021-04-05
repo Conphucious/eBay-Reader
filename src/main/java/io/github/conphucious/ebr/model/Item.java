@@ -9,6 +9,7 @@ public class Item {
     private String price;
     private String link;
     private ItemType type;
+    private ItemStatus status;
 
     public Item(String link) {
         this.link = link;
@@ -62,9 +63,20 @@ public class Item {
         this.type = type;
     }
 
+    public ItemStatus getStatus() { return status; }
+
+    public void setStatus(ItemStatus status) { this.status = status; }
+
     @Override
     public String toString() {
-        return "Item [title=" + title + ", timeLeft=" + timeLeft + ", dateEnd=" + dateEnd
-                + ", price=" + price + ", link=" + link + "]";
+        return "Item{" +
+                "title='" + title + '\'' +
+                ", timeLeft='" + timeLeft + '\'' +
+                ", dateEnd=" + dateEnd +
+                ", price='" + price + '\'' +
+                ", link='" + link + '\'' +
+                ", type=" + type +
+                ", status=" + status +
+                '}';
     }
 }
