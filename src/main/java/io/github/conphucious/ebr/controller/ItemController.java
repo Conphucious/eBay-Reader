@@ -1,15 +1,15 @@
 package io.github.conphucious.ebr.controller;
 
-import io.github.conphucious.ebr.model.Identifier;
-import io.github.conphucious.ebr.model.Item;
-import io.github.conphucious.ebr.model.ItemStatus;
-import io.github.conphucious.ebr.model.ItemType;
+import io.github.conphucious.ebr.model.*;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
+import org.jsoup.select.Elements;
 
 import java.io.IOException;
 import java.util.Date;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class ItemController {
 
@@ -32,6 +32,12 @@ public class ItemController {
             String itemPrice = getPrice(document, itemType);
             System.out.println(itemPrice);
 
+
+            // If time left is empty or locale.time_left_none then we don't need to check for date. Maybe add available then instead?
+            String timeLeft = getTimeLeft(document);
+            System.out.println(timeLeft);
+            Date endDate = getEndDate(document);
+            System.out.println(endDate);
 
 
         } catch (IOException e) {
@@ -75,9 +81,24 @@ public class ItemController {
         return priceElement.text();
     }
 
-    private Date[] getDates(Document document) {
+    private String getTimeLeft(Document document) {
+        String timeLeftElement = document.select(Identifier.SELECT_ELEMENTS_TIME_LEFT).text();
+        return timeLeftElement.isEmpty() ? Locale.TIME_LEFT_NONE : timeLeftElement;
+    }
 
-        return null;
+    private Date getEndDate(Document document) {
+        Date dateEnd = null;
+
+        Elements dateEndElement = document.select(Identifier.SELECT_ELEMENTS_DATE_END);
+        Pattern pattern = Pattern.compile(Identifier.REGEX_ITEM_DATE);
+
+        Matcher matcher = pattern.matcher(dateEndElement.html());
+        while(matcher.find()) {
+            long timeMs = Long.parseLong(matcher.group());
+            dateEnd = new Date(timeMs);
+        }
+
+        return dateEnd;
     }
 
 
