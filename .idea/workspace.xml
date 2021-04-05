@@ -30,16 +30,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ad086e1c-8bd3-4523-989e-9c6b09624023" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/conphucious/ebr/controller/ItemController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/conphucious/ebr/model/Identifiers.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/conphucious/ebr/model/ItemStatus.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/io/github/conphucious/ebr/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/conphucious/ebr/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/conphucious/ebr/model/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/conphucious/ebr/model/Item.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/conphucious/ebr/controller/ItemController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/conphucious/ebr/controller/ItemController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/conphucious/ebr/model/Identifiers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/conphucious/ebr/model/Identifiers.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/io/github/conphucious/ebr/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/io/github/conphucious/ebr/App.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/io/github/conphucious/ebr/controller/FetchController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/io/github/conphucious/ebr/controller/FetchController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/io/github/conphucious/ebr/model/Item.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/io/github/conphucious/ebr/model/Item.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/io/github/conphucious/ebr/controller/ItemController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/io/github/conphucious/ebr/controller/ItemController.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -125,7 +121,7 @@
       <workItem from="1616468434983" duration="196000" />
       <workItem from="1616468638947" duration="1148000" />
       <workItem from="1616892101117" duration="292000" />
-      <workItem from="1617593144524" duration="1379000" />
+      <workItem from="1617593144524" duration="3049000" />
     </task>
     <servers />
   </component>
@@ -169,22 +165,22 @@
       <screen x="0" y="0" width="2482" height="1080" />
     </state>
     <state x="1021" y="295" key="FileChooserDialogImpl/0.0.2482.1080@0.0.2482.1080" timestamp="1616468649634" />
-    <state width="1195" height="169" key="GridCell.Tab.0.bottom" timestamp="1617594422392">
+    <state width="1195" height="169" key="GridCell.Tab.0.bottom" timestamp="1617596182756">
       <screen x="0" y="0" width="2482" height="1080" />
     </state>
-    <state width="1195" height="169" key="GridCell.Tab.0.bottom/0.0.2482.1080@0.0.2482.1080" timestamp="1617594422392" />
-    <state width="1195" height="169" key="GridCell.Tab.0.center" timestamp="1617594422392">
+    <state width="1195" height="169" key="GridCell.Tab.0.bottom/0.0.2482.1080@0.0.2482.1080" timestamp="1617596182756" />
+    <state width="1195" height="169" key="GridCell.Tab.0.center" timestamp="1617596182756">
       <screen x="0" y="0" width="2482" height="1080" />
     </state>
-    <state width="1195" height="169" key="GridCell.Tab.0.center/0.0.2482.1080@0.0.2482.1080" timestamp="1617594422392" />
-    <state width="1195" height="169" key="GridCell.Tab.0.left" timestamp="1617594422392">
+    <state width="1195" height="169" key="GridCell.Tab.0.center/0.0.2482.1080@0.0.2482.1080" timestamp="1617596182756" />
+    <state width="1195" height="169" key="GridCell.Tab.0.left" timestamp="1617596182756">
       <screen x="0" y="0" width="2482" height="1080" />
     </state>
-    <state width="1195" height="169" key="GridCell.Tab.0.left/0.0.2482.1080@0.0.2482.1080" timestamp="1617594422392" />
-    <state width="1195" height="169" key="GridCell.Tab.0.right" timestamp="1617594422392">
+    <state width="1195" height="169" key="GridCell.Tab.0.left/0.0.2482.1080@0.0.2482.1080" timestamp="1617596182756" />
+    <state width="1195" height="169" key="GridCell.Tab.0.right" timestamp="1617596182756">
       <screen x="0" y="0" width="2482" height="1080" />
     </state>
-    <state width="1195" height="169" key="GridCell.Tab.0.right/0.0.2482.1080@0.0.2482.1080" timestamp="1617594422392" />
+    <state width="1195" height="169" key="GridCell.Tab.0.right/0.0.2482.1080@0.0.2482.1080" timestamp="1617596182756" />
     <state x="721" y="114" key="SettingsEditor" timestamp="1616468694455">
       <screen x="0" y="0" width="2482" height="1080" />
     </state>
