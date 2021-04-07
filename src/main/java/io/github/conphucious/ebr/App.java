@@ -2,6 +2,7 @@ package io.github.conphucious.ebr;
 
 import io.github.conphucious.ebr.controller.ItemController;
 import io.github.conphucious.ebr.model.Item;
+import io.github.conphucious.ebr.view.TrayMenu;
 
 public class App {
 	public static void main(String[] args) {
@@ -22,6 +23,8 @@ public class App {
 		System.out.println(b);
 		System.out.println(c);
 		System.out.println(d);
+
+		TrayMenu tm = new TrayMenu();
 
 	}
 }
