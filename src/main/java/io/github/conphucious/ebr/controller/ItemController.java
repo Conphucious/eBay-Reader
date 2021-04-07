@@ -12,41 +12,46 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class ItemController {
-
-
     public Item processItem(String url) {
         Item item = new Item(url);
         try {
-            Document document = Jsoup.connect(item.getLink()).get();
+            Document document = Jsoup.connect(item.getUrl()).get();
+            String title = getTitle(document);
             ItemStatus itemStatus = getStatus(document);
-
-            if (itemStatus == ItemStatus.ENDED) {
-                System.out.println("ENDED"); // item type stays null
-                return null;
-
-
-            } else if (itemStatus == ItemStatus.IN_PROGRESS) {
-            }
-
             ItemType itemType = getType(document);
-            String itemPrice = getPrice(document, itemType);
-            System.out.println(itemPrice);
 
+            // set price based on if it ended
+            String itemPrice = (itemStatus == ItemStatus.ENDED) ? getPriceEnded(document) : getPrice(document, itemType);
 
             // If time left is empty or locale.time_left_none then we don't need to check for date. Maybe add available then instead?
             String timeLeft = getTimeLeft(document);
-            System.out.println(timeLeft);
             Date endDate = getEndDate(document);
-            System.out.println(endDate);
 
-
+            item.setTitle(title);
+            item.setItemStatus(itemStatus);
+            item.setItemType(itemType);
+            item.setPrice(itemPrice);
+            item.setTimeLeft(timeLeft);
+            item.setDateEnd(endDate);
         } catch (IOException e) {
+            e.printStackTrace();
         }
 
-
-        return null;
+        return item;
     }
 
+    private String getTitle(Document document) {
+        Element title = document.getElementById(Identifier.ITEM_TITLE);
+        return title.text().replace(Identifier.ITEM_TITLE_REMOVE_PREFIX, "");
+    }
+
+    /**
+     * Determines ItemStatus
+     *
+     * @param document
+     * @return ItemStatus
+     * @see io.github.conphucious.ebr.model.ItemStatus
+     */
     private ItemStatus getStatus(Document document) {
         Element statusElement = document.getElementById(Identifier.ITEM_STATUS);
         return statusElement == null ? ItemStatus.IN_PROGRESS : ItemStatus.ENDED;
@@ -69,8 +74,8 @@ public class ItemController {
     }
 
     private String getPrice(Document document, ItemType itemType) {
-        System.out.println(itemType);
         Element priceElement = null;
+
         if (itemType == ItemType.BEST_OFFER) {
             priceElement = document.getElementById(Identifier.ITEM_PRICE_BEST_OFFER_ID);
         } else if (itemType == ItemType.BUY) {
@@ -78,7 +83,13 @@ public class ItemController {
         } else if (itemType == ItemType.BID) {
             priceElement = document.getElementById(Identifier.ITEM_PRICE_BID_ID);
         }
+
         return priceElement.text();
+    }
+
+    private String getPriceEnded(Document document) {
+        Elements pricesElement = document.getElementsByClass(Identifier.ITEM_PRICE_ENDED_CLASS);
+        return pricesElement.text();
     }
 
     private String getTimeLeft(Document document) {
@@ -93,14 +104,11 @@ public class ItemController {
         Pattern pattern = Pattern.compile(Identifier.REGEX_ITEM_DATE);
 
         Matcher matcher = pattern.matcher(dateEndElement.html());
-        while(matcher.find()) {
+        while (matcher.find()) {
             long timeMs = Long.parseLong(matcher.group());
             dateEnd = new Date(timeMs);
         }
 
         return dateEnd;
     }
-
-
-
 }

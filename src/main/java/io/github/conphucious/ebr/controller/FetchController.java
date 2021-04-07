@@ -16,9 +16,8 @@ import org.jsoup.select.Elements;
 import io.github.conphucious.ebr.model.Item;
 
 public class FetchController {
-	
 	private List<Item> itemList;
-	
+
 	public FetchController() {
 		itemList = new ArrayList<>();
 	}
@@ -32,7 +31,7 @@ public class FetchController {
 	public Item fetchInfo(String url) {
 		Item item = new Item(url);
 		try {
-			Document document = Jsoup.connect(item.getLink()).get();
+			Document document = Jsoup.connect(item.getUrl()).get();
 			Elements titleElement = document.select("span[id=\"vi-lkhdr-itmTitl\"]");
 			Elements timeLeftElement = document.select("span[id=\"vi-cdown_timeLeft\"]");
 			Elements dateEndElement = document.select("span[class=\"vi-tm-left\"]");
@@ -80,5 +79,4 @@ public class FetchController {
 			System.out.println(item);
 		}
 	}
-	
 }

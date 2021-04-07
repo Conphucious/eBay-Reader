@@ -1,6 +1,9 @@
 package io.github.conphucious.ebr.model;
 
 public class Identifier {
+    // ITEM TITLE
+    public static final String ITEM_TITLE = "itemTitle";
+    public static final String ITEM_TITLE_REMOVE_PREFIX = "Details about ";
 
     // ITEM STATUS HTML ID
     public static final String ITEM_STATUS = "w1-5-_msg";
@@ -9,6 +12,7 @@ public class Identifier {
     public static final String ITEM_PRICE_BID_ID = "prcIsum_bidPrice";
     public static final String ITEM_PRICE_BUY_ID = "prcIsum";
     public static final String ITEM_PRICE_BEST_OFFER_ID = "mm-saleDscPrc";
+    public static final String ITEM_PRICE_ENDED_CLASS = "notranslate vi-VR-cvipPrice";
 
     // ITEM TYPES HTML ID
     public static final String ITEM_TYPE_BID_ID = "prcIsum_bidPrice";
@@ -22,5 +26,4 @@ public class Identifier {
 
     // REGEXP PATTERNS
     public static final String REGEX_ITEM_DATE = "(?<=timems=\")(.*)(?=\")";
-
 }
