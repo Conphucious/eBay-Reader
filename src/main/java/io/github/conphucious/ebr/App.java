@@ -1,6 +1,5 @@
 package io.github.conphucious.ebr;
 
-import io.github.conphucious.ebr.controller.FetchController;
 import io.github.conphucious.ebr.controller.ItemController;
 
 public class App {

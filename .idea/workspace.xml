@@ -30,13 +30,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ad086e1c-8bd3-4523-989e-9c6b09624023" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/conphucious/ebr/model/Locale.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_projectlombok_lombok_1_18_12.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ebr.iml" beforeDir="false" afterPath="$PROJECT_DIR$/ebr.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/io/github/conphucious/ebr/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/conphucious/ebr/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/conphucious/ebr/controller/ItemController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/conphucious/ebr/controller/ItemController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/conphucious/ebr/controller/FetchController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/conphucious/ebr/controller/FetchController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/conphucious/ebr/model/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/conphucious/ebr/model/Item.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/conphucious/ebr/model/ItemStatus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/conphucious/ebr/model/ItemStatus.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/conphucious/ebr/model/ItemType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/conphucious/ebr/model/ItemType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/conphucious/ebr/model/Locale.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/conphucious/ebr/model/Locale.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/io/github/conphucious/ebr/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/io/github/conphucious/ebr/App.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/io/github/conphucious/ebr/controller/ItemController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/io/github/conphucious/ebr/controller/ItemController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/io/github/conphucious/ebr/model/Identifiers.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/io/github/conphucious/ebr/model/Item.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/io/github/conphucious/ebr/model/Item.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,6 +83,7 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.annotationProcessors" />
   </component>
   <component name="RunManager">
     <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -88,19 +95,6 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -122,7 +116,10 @@
       <workItem from="1616468434983" duration="196000" />
       <workItem from="1616468638947" duration="1148000" />
       <workItem from="1616892101117" duration="292000" />
-      <workItem from="1617593144524" duration="4412000" />
+      <workItem from="1617593144524" duration="4443000" />
+      <workItem from="1617766296079" duration="231000" />
+      <workItem from="1617766543211" duration="277000" />
+      <workItem from="1617766831174" duration="30000" />
     </task>
     <servers />
   </component>
@@ -154,6 +151,10 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="1453" y="181" key="#Plugins" timestamp="1617766819899">
+      <screen x="0" y="0" width="2482" height="1080" />
+    </state>
+    <state x="1453" y="181" key="#Plugins/0.0.2482.1080@0.0.2482.1080" timestamp="1617766819899" />
     <state x="1046" y="224" key="#com.intellij.ide.util.MemberChooser" timestamp="1616892350532">
       <screen x="0" y="0" width="2482" height="1080" />
     </state>
@@ -166,26 +167,30 @@
       <screen x="0" y="0" width="2482" height="1080" />
     </state>
     <state x="1021" y="295" key="FileChooserDialogImpl/0.0.2482.1080@0.0.2482.1080" timestamp="1616468649634" />
-    <state width="1195" height="169" key="GridCell.Tab.0.bottom" timestamp="1617597542260">
+    <state width="1195" height="169" key="GridCell.Tab.0.bottom" timestamp="1617597590955">
       <screen x="0" y="0" width="2482" height="1080" />
     </state>
-    <state width="1195" height="169" key="GridCell.Tab.0.bottom/0.0.2482.1080@0.0.2482.1080" timestamp="1617597542260" />
-    <state width="1195" height="169" key="GridCell.Tab.0.center" timestamp="1617597542260">
+    <state width="1195" height="169" key="GridCell.Tab.0.bottom/0.0.2482.1080@0.0.2482.1080" timestamp="1617597590955" />
+    <state width="1195" height="169" key="GridCell.Tab.0.center" timestamp="1617597590954">
       <screen x="0" y="0" width="2482" height="1080" />
     </state>
-    <state width="1195" height="169" key="GridCell.Tab.0.center/0.0.2482.1080@0.0.2482.1080" timestamp="1617597542260" />
-    <state width="1195" height="169" key="GridCell.Tab.0.left" timestamp="1617597542259">
+    <state width="1195" height="169" key="GridCell.Tab.0.center/0.0.2482.1080@0.0.2482.1080" timestamp="1617597590954" />
+    <state width="1195" height="169" key="GridCell.Tab.0.left" timestamp="1617597590954">
       <screen x="0" y="0" width="2482" height="1080" />
     </state>
-    <state width="1195" height="169" key="GridCell.Tab.0.left/0.0.2482.1080@0.0.2482.1080" timestamp="1617597542259" />
-    <state width="1195" height="169" key="GridCell.Tab.0.right" timestamp="1617597542260">
+    <state width="1195" height="169" key="GridCell.Tab.0.left/0.0.2482.1080@0.0.2482.1080" timestamp="1617597590954" />
+    <state width="1195" height="169" key="GridCell.Tab.0.right" timestamp="1617597590954">
       <screen x="0" y="0" width="2482" height="1080" />
     </state>
-    <state width="1195" height="169" key="GridCell.Tab.0.right/0.0.2482.1080@0.0.2482.1080" timestamp="1617597542260" />
-    <state x="721" y="114" key="SettingsEditor" timestamp="1616468694455">
+    <state width="1195" height="169" key="GridCell.Tab.0.right/0.0.2482.1080@0.0.2482.1080" timestamp="1617597590954" />
+    <state x="150" y="198" key="Maven.ArtifactSearchDialog" timestamp="1617766484140">
       <screen x="0" y="0" width="2482" height="1080" />
     </state>
-    <state x="721" y="114" key="SettingsEditor/0.0.2482.1080@0.0.2482.1080" timestamp="1616468694455" />
+    <state x="150" y="198" key="Maven.ArtifactSearchDialog/0.0.2482.1080@0.0.2482.1080" timestamp="1617766484140" />
+    <state x="721" y="114" key="SettingsEditor" timestamp="1617766714468">
+      <screen x="0" y="0" width="2482" height="1080" />
+    </state>
+    <state x="721" y="114" key="SettingsEditor/0.0.2482.1080@0.0.2482.1080" timestamp="1617766714468" />
     <state x="1672" y="229" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1616892321719">
       <screen x="0" y="0" width="2482" height="1080" />
     </state>
@@ -194,13 +199,13 @@
       <screen x="0" y="0" width="2482" height="1080" />
     </state>
     <state x="-7" y="0" width="1255" height="1087" key="dock-window-1/0.0.2482.1080@0.0.2482.1080" timestamp="1617593235680" />
-    <state x="-7" y="0" width="1255" height="1087" key="dock-window-2" timestamp="1617593901617">
+    <state x="-7" y="0" width="1255" height="1087" key="dock-window-2" timestamp="1617766593843">
       <screen x="0" y="0" width="2482" height="1080" />
     </state>
-    <state x="-7" y="0" width="1255" height="1087" key="dock-window-2/0.0.2482.1080@0.0.2482.1080" timestamp="1617593901617" />
-    <state x="904" y="235" width="672" height="678" key="search.everywhere.popup" timestamp="1616892349871">
+    <state x="-7" y="0" width="1255" height="1087" key="dock-window-2/0.0.2482.1080@0.0.2482.1080" timestamp="1617766593843" />
+    <state x="904" y="235" width="672" height="678" key="search.everywhere.popup" timestamp="1617766790894">
       <screen x="0" y="0" width="2482" height="1080" />
     </state>
-    <state x="904" y="235" width="672" height="678" key="search.everywhere.popup/0.0.2482.1080@0.0.2482.1080" timestamp="1616892349871" />
+    <state x="904" y="235" width="672" height="678" key="search.everywhere.popup/0.0.2482.1080@0.0.2482.1080" timestamp="1617766790894" />
   </component>
 </project>
